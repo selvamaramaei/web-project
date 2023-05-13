@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Dark Knight</title>
+    <style>
+      .card {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        width: 400px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .poster {
+        width: 100px;
+        margin-right: 10px;
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="movie-card"></div>
+
+    <script>
+      const API_KEY = "e3ddea8a3be4d60402f34bb179a9605f";
+      const MOVIE_TITLE = "The Dark Knight";
+      const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&t=${MOVIE_TITLE}`;
+
+      // API isteğini yap
+      fetch(API_URL)
+        .then((response) => response.json())
+        .then((data) => {
+          // film kartını oluştur
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          // poster resmini ekle
+          const poster = document.createElement("img");
+          poster.classList.add("poster");
+          poster.src = data.Poster;
+          card.appendChild(poster);
+
+          // film detaylarını ekle
+          const details = document.createElement("div");
+          details.classList.add("details");
+
+          const title = document.createElement("h1");
+          title.textContent = data.Title;
+          details.appendChild(title);
+
+          const year = document.createElement("p");
+          year.textContent = `Year: ${data.Year}`;
+          details.appendChild(year);
+
+          const plot = document.createElement("p");
+          plot.textContent = data.Plot;
+          details.appendChild(plot);
+
+          card.appendChild(details);
+
+          // film kartını sayfaya ekle
+          const movieCard = document.getElementById("movie-card");
+          movieCard.appendChild(card);
+        })
+        .catch((error) => {
+          console.error("API request failed", error);
+        });
+    </script>
+  </body>
+</html>
