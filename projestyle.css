@@ -235,3 +235,13 @@ th {
   font-weight: 650;
   text-transform: uppercase;
 }
+
+/* log in*/
+#form {
+  background-color: red;
+  width: 25%;
+  margin: 120px auto;
+  padding: 50px;
+  box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+  border-radius: 4px;
+}

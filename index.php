@@ -24,7 +24,7 @@
 
     <!-- css file's link -->
     <link rel="stylesheet" href="projestyle.css" />
-    <title>İlgi alanım</title>
+    <title>Log in</title>
   </head>
   <body>
     <!-- navbar -->
@@ -52,12 +52,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="anadayfa-hakimda.html"
-                  >Home</a
-                >
+                <a class="nav-link" aria-current="page" href="anadayfa-hakimda.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="city.html">Şehrim</a>
@@ -69,7 +64,7 @@
                 <a class="nav-link" href="ilgi_alanım.html">İlgi alanım</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Log in</a>
+                <a class="nav-link active" href="log-in.html">Log in</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="iletişim.html">İletişim</a>
@@ -84,58 +79,19 @@
     </header>
     <!-- /navbar -->
 
-    <!-- main -->
     <main>
-      <section id="paragraf1">
-        <div class="container my-4">
-          <div class="row align-items-center mb-5">
-            <div class="col-lg-12" id="content" style="text-align: center">
-              <h3>OKULLAR</h3>
-              <ul class="list-group">
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="paragraf2">
-        <div class="container my-4">
-          <div class="row align-items-center mb-5">
-            <div class="col-lg-12" id="content" style="text-align: center">
-              <h3>BECERİLER</h3>
-              <ul class="list-group">
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="paragraf3">
-        <div class="container my-4">
-          <div class="row align-items-center mb-5">
-            <div class="col-lg-12" id="content" style="text-align: center">
-              <h3>SERTİFİKALAR</h3>
-              <ul class="list-group">
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Lorem, ipsum.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!--/ main -->
+     <div id="form">
+        <h2>login</h2>
+          <form name = "form" method="POST">
+               <label>E-mail : </label>
+               <input type="text" id="user" name="user"><br><br>
+               <label> Şifre :</label>
+               <input type="password" id="pass" name="pass"><br><br>
+               <input type="submit" class="main-btn primary-btn" id="btn" value="login" name="submit">
+          </form>
+     </div>
+   </main>
+
 
     <!-- Bootstrap Bundle link -->
     <script
