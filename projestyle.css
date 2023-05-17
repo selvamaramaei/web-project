@@ -69,11 +69,11 @@ section {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 0.3125rem;
-  box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
-  border: double 0.125rem transparent;
+  box-shadow: 0 0.625rem 0.875rem rgb(118 85 225 / 30%);
+  border: double 0.1rem transparent;
   padding: 0 2.625rem;
   transition: all 0.3s ease-in-out;
-  --webkit-transition: all 0.3s ease-in-out;
+  --webkit-transition: all 0.5s ease-in-out;
 }
 .primary-btn {
   background-image: var(--gradient);
@@ -110,7 +110,7 @@ h1 {
 h2 {
   font-size: 2.5rem;
   line-height: 3.437rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-black);
   margin-bottom: 1.5625rem;
   font-family: var(--primary-font);
@@ -200,6 +200,7 @@ p {
 }
 
 #content {
+  padding: 50px;
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
   box-shadow: rgba(194, 113, 174, 0.15) 0px 15px 25px,
     rgba(202, 26, 134, 0.05) 0px 5px 10px;
@@ -234,14 +235,4 @@ th {
   line-height: 1rem;
   font-weight: 650;
   text-transform: uppercase;
-}
-
-/* log in*/
-#form {
-  background-color: red;
-  width: 25%;
-  margin: 120px auto;
-  padding: 50px;
-  box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
-  border-radius: 4px;
 }

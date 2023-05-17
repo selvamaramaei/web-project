@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="images/glob-icon.png" />
+
+    <!-- css file's link -->
+    <link rel="stylesheet" href="projestyle.css" />
+    <link rel="stylesheet" href="login.css" />
+
+    <title>iletişim</title>
+  </head>
+  <body>
+    <!-- java script link -->
+    <script src="validation.js"></script>
+    <script src="changevalidate.js"></script>
+
+    <!-- navbar -->
+    <header class="header-wrapper">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/glob-icon.png" alt="logo" class="img-fluid" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="anadayfa-hakimda.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="city.html">Şehrim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mirasımız.html">Mirasımız</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ilgi_alanım.html">İlgi alanım</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="log-in.html">Log in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="iletişim.html">İletişim</a>
+              </li>
+              <li class="nav-item">
+                <img src="images/night-mode.png" id="moon_icon" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- /navbar -->
+    <main>
+      <div class="container my-4" id="iletişim-form">
+        <h2 class="my-3" style="text-align: center">Bize ulaşın</h2>
+        <div class="row g-2">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-body">
+                <div class="alert alert-primary" role="alert">
+                  lütfen formu Doldurun
+                </div>
+                <form
+                  class="row g-3"
+                  name="myForm"
+                  action="iletişim.php"
+                  onsubmit="return validate();"
+                  method="post"
+                >
+                  <div class="col-md-6">
+                    <label
+                      for="email"
+                      class="form-label"
+                      placeholder="@gmail.com"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">isim - soyisim</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label for="phone" class="form-label">Telefon</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="gender" class="form-label">Cinsiyet</label>
+                    <div class="form-check col-md-12" style="width: 100%">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                      />
+                      <label class="form-check-label" for="male">Erkek</label>
+                    </div>
+                    <div class="form-check col-md-6" style="width: 100%">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                      />
+                      <label class="form-check-label" for="female">Kadın</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputState" class="form-label">Şehir</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Seçin...</option>
+                      <option>Sakarya</option>
+                      <option>istanbul</option>
+                      <option>Kocaeli</option>
+                      <option>Bursa</option>
+                      <option>İzmir</option>
+                      <option>Antalya</option>
+                      <option>Ankara</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="subject" class="form-label">Konu</label>
+                    <input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label for="message" class="form-label">Mesaj</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <button
+                      class="main-btn secondary-btn"
+                      style="width: 100%"
+                      onclick="validate()"
+                    >
+                      Gönder
+                    </button>
+                  </div>
+                  <div class="col-md-6">
+                    <button
+                      type="button"
+                      class="main-btn secondary-btn"
+                      style="width: 100%"
+                      onclick="clearForm()"
+                    >
+                      Temizle
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-12 mt-4" style="text-align: center">
+              <a class="logo" href="https://www.instagram.com/selva.mrm/">
+                <img
+                  src="images/icons8-instagram-100.png"
+                  alt="logo"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <div class="col-md-12 mt-4" style="text-align: center">
+              <a
+                class="logo"
+                href="https://www.linkedin.com/in/selva-maramaei-522565270/"
+              >
+                <img
+                  src="images/icons8-linkedin-100.png"
+                  alt="logo"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <div class="col-md-12 mt-4" style="text-align: center">
+              <a class="logo" href="mailto:selvamaramaei.2003@gmail.com">
+                <img
+                  src="images/icons8-mail-100.png"
+                  alt="logo"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <div class="col-md-12 mt-4" style="text-align: center">
+              <a class="logo" href="https://github.com/selvamaramaei">
+                <img
+                  src="images//icons8-github-100.png"
+                  alt="logo"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <div class="col-md-12 mt-4" style="text-align: center">
+              <a class="logo" href="https://goo.gl/maps/oJBtxjB6n3xiSyT38">
+                <img
+                  src="images/icons8-location-100.png"
+                  alt="logo"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          // Form gönderilmeden önce doğrulama yapmak için validate() fonksiyonunu çağırır.
+          if (!validate()) {
+            // Doğrulama başarısız olduğunda form gönderimini engeller
+            event.preventDefault();
+          }
+        });
+    </script>
+    <script>
+      function clearForm() {
+        document.getElementById("myForm").reset();
+      }
+    </script>
+
+    <!-- Bootstrap Bundle link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- dark mood için javascript -->
+    <script>
+      var moon_icon = document.getElementById("moon_icon");
+      moon_icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
+    </script>
+  </body>
+</html>

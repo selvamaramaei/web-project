@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Playfair+Display&family=Rubik:wght@300&family=Sigmar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Playfair+Display&family=Roboto:wght@100&family=Rubik:wght@300&family=Sigmar&display=swap");
+
+:root {
+  /* background color */
+  --primary-color: #4458dc;
+  --secondary-color: #854fee;
+  --bg-white: #fff;
+  --bg-light: #faf8ff;
+  --bg-black: #000;
+  --bg-gray: #eee;
+  --gradient: linear-gradient(to right, #576bec 0%, #a67ef7 100%),
+    radial-gradient(circle at top left, #4b60e6, #9160f4);
+
+  /* text color */
+  --primary-text: #4458dc;
+  --secondary-text: #854fee;
+  --text-white: #fff;
+  --text-black: #000;
+  --text-gray: #515151;
+
+  /* font */
+  --primary-font: "Rubik", "sans-serif";
+  --secondary-font: "Roboto", "sans-serif";
+}
+
+#form {
+  background-image: var(--gradient);
+  width: 50%;
+  margin: 120px auto;
+  padding: 50px;
+  box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+  border-radius: 4px;
+}
+#iletişim-form {
+  background-image: var(--gradient);
+  width: 75%;
+  margin: 70px auto;
+  padding: 40px;
+  box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+  border-radius: 4px;
+}
+
+.form-label {
+  font-size: 1.3rem;
+  line-height: 0.75rem;
+  font-weight: 200;
+  font-family: "Rubik";
+}
