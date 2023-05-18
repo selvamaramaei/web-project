@@ -30,8 +30,7 @@
   </head>
   <body>
     <!-- java script link -->
-    <script src="validation.js"></script>
-    <script src="changevalidate.js"></script>
+    <script src="iletişim.js"></script>
 
     <!-- navbar -->
     <header class="header-wrapper">
@@ -75,13 +74,7 @@
                 <a class="nav-link" href="ilgi_alanım.html">İlgi alanım</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="log-in.html">Log in</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="iletişim.html">İletişim</a>
-              </li>
-              <li class="nav-item">
-                <img src="images/night-mode.png" id="moon_icon" />
+                <a class="nav-link" href="login_html.html">Log in</a>
               </li>
             </ul>
           </div>
@@ -102,8 +95,8 @@
                 <form
                   class="row g-3"
                   name="myForm"
+                  id="myForm"
                   action="iletişim.php"
-                  onsubmit="return validate();"
                   method="post"
                 >
                   <div class="col-md-6">
@@ -167,11 +160,12 @@
                       <option selected>Seçin...</option>
                       <option>Sakarya</option>
                       <option>istanbul</option>
-                      <option>Kocaeli</option>
+                      <option>İzmit</option>
                       <option>Bursa</option>
                       <option>İzmir</option>
                       <option>Antalya</option>
                       <option>Ankara</option>
+                      >
                     </select>
                   </div>
                   <div class="col-md-12">
@@ -193,8 +187,7 @@
                   </div>
                   <div class="col-md-6">
                     <button
-                      class="main-btn secondary-btn"
-                      style="width: 100%"
+                      class="main-btn secondary-btn w-100"
                       onclick="validate()"
                     >
                       Gönder
@@ -203,8 +196,7 @@
                   <div class="col-md-6">
                     <button
                       type="button"
-                      class="main-btn secondary-btn"
-                      style="width: 100%"
+                      class="main-btn secondary-btn w-100"
                       onclick="clearForm()"
                     >
                       Temizle
@@ -291,13 +283,5 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-
-    <!-- dark mood için javascript -->
-    <script>
-      var moon_icon = document.getElementById("moon_icon");
-      moon_icon.onclick = function () {
-        document.body.classList.toggle("dark-theme");
-      };
-    </script>
   </body>
 </html>

@@ -1,11 +1,23 @@
-<!DOCTYPE html>
+<?php
+$email = $_POST['email'];
+$sifre = $_POST['sifre'];
+
+$validEmailPrefix = substr($email, 0, strpos($email, "@"));
+
+if ($email === $validEmailPrefix."@sakarya.edu.tr" && $validEmailPrefix === $sifre) {
+  $signal = true;
+} else {
+  $signal = false;
+  header("refresh:5;url=login_html.html");
+}
+?>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- bootstrap link -->
-    <link
+<head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- bootstrap link -->
+ <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
@@ -21,14 +33,14 @@
     />
     <!-- Favicon link -->
     <link rel="icon" type="image/png" href="images/glob-icon.png" />
-
     <!-- css file's link -->
     <link rel="stylesheet" href="projestyle.css" />
-    <title>İlgi alanım</title>
-  </head>
-  <body>
-    <!-- navbar -->
-    <header class="header-wrapper">
+    <link rel="stylesheet" href="login.css" />
+
+</head>
+<body>
+ <!-- navbar -->
+ <header class="header-wrapper">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -66,12 +78,10 @@
                 <a class="nav-link" href="mirasımız.html">Mirasımız</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="ilgi_alanım.html"
-                  >İlgi alanım</a
-                >
+                <a class="nav-link" href="ilgi_alanım.html">İlgi alanım</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login_html.html">Log in</a>
+                <a class="nav-link active" href="login_html.html">Log in</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="iletişim.html">İletişim</a>
@@ -80,14 +90,32 @@
           </div>
         </div>
       </nav>
-    </header>
-    <!-- /navbar -->
+</header>
+<!-- /navbar -->
 
-    <!-- Bootstrap Bundle link -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+      <section  class=" mx-5 mb-5">
+        <div class=" container">
+          <div class="row my-3 ">
+            <div class="col-lg-12 my-4 text-center ">
+              <h3>
+                  <?php
+                    if($signal==true)
+                    {
+                      echo $sifre."  Hoşgeldin" ;
+                    }
+                    else
+                    {
+                      echo "hatalı giriş yaptınız ! ";
+                      echo "log in sayfasına geri yönlendiriliyorsunuz";
+                    }
+                  ?>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </table>
+    
+    </body>
+<html>

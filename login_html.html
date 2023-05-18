@@ -24,9 +24,12 @@
 
     <!-- css file's link -->
     <link rel="stylesheet" href="projestyle.css" />
-    <title>İlgi alanım</title>
+    <link rel="stylesheet" href="login.css" />
+    <title>Log in</title>
   </head>
   <body>
+    <script src="login.js"></script>
+
     <!-- navbar -->
     <header class="header-wrapper">
       <nav class="navbar navbar-expand-lg">
@@ -66,12 +69,10 @@
                 <a class="nav-link" href="mirasımız.html">Mirasımız</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="ilgi_alanım.html"
-                  >İlgi alanım</a
-                >
+                <a class="nav-link" href="ilgi_alanım.html">İlgi alanım</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login_html.html">Log in</a>
+                <a class="nav-link active" href="log-in.html">Log in</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="iletişim.html">İletişim</a>
@@ -82,6 +83,63 @@
       </nav>
     </header>
     <!-- /navbar -->
+
+    <main>
+      <section class="mx-5">
+        <form
+          id="form"
+          action="login_php.php"
+          name="myForm"
+          class="needs-validation"
+          onsubmit="return validate();"
+          method="POST"
+        >
+          <div class="form-row my-3">
+            <div class="col-lg-12 my-3">
+              <h5>
+                Email ör : "b1812100001@sakarya.edu.tr" <br />
+                Şifre : öğrenci numarası
+              </h5>
+            </div>
+            <div class="col-lg-12 my-3">
+              <label for="email" class="form-label">Email:</label>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                id="email"
+                onchange="emailV();"
+                placeholder="@sakarya.edu.tr"
+              />
+              <div class="valid-feedback">Başarılı Giriş</div>
+              <div class="invalid-feedback">Hatalı Giriş</div>
+            </div>
+          </div>
+          <div class="form-row my-3">
+            <div class="col-lg-12 mb-3">
+              <label for="password" class="form-label">Şifre:</label>
+              <input
+                type="password"
+                class="form-control"
+                name="sifre"
+                id="sifreInput"
+                onchange="sifreV();"
+                placeholder="öğrenci NO"
+              />
+              <div class="valid-feedback">Başarılı Giriş</div>
+              <div class="invalid-feedback">Hatalı hatalı</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-12 mt-5 text-center">
+              <button type="submit" class="main-btn secondary-btn w-25">
+                Gönder
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
 
     <!-- Bootstrap Bundle link -->
     <script

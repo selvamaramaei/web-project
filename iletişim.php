@@ -72,13 +72,10 @@
                 <a class="nav-link" href="ilgi_alanım.html">İlgi alanım</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="log-in.html">Log in</a>
+                <a class="nav-link" href="login_html.html">Log in</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="iletişim.html">İletişim</a>
-              </li>
-              <li class="nav-item">
-                <img src="images/night-mode.png" id="moon_icon" />
               </li>
             </ul>
           </div>
@@ -134,13 +131,6 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-
-    <!-- dark mood için javascript -->
-    <script>
-      var moon_icon = document.getElementById("moon_icon");
-      moon_icon.onclick = function () {
-        document.body.classList.toggle("dark-theme");
-      };
     </script>
     </body>
     <html>
