@@ -14,8 +14,8 @@
   --bg-light: #faf8ff;
   --bg-black: #000;
   --bg-gray: #eee;
-  --gradient: linear-gradient(to right, #4458dc 0%, #854fee 100%),
-    radial-gradient(circle at top left, #4458dc, #854fee);
+  --gradient: linear-gradient(to right, #576bec 0%, #a67ef7 100%),
+    radial-gradient(circle at top left, #4b60e6, #9160f4);
 
   /* text color */
   --primary-text: #4458dc;
@@ -139,11 +139,6 @@ p {
   font-weight: 750;
 }
 
-#moon_icon {
-  width: 30px;
-  cursor: pointer;
-}
-
 /* navbar */
 .header_wrapper .navbar {
   padding: 0.9rem 0;
@@ -221,7 +216,8 @@ p {
   box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
 }
 
-td {
+td,
+.list-group-item {
   color: var(--text-black);
   font-size: 1.2rem;
   line-height: 1rem;
@@ -235,4 +231,43 @@ th {
   line-height: 1rem;
   font-weight: 650;
   text-transform: uppercase;
+}
+#cv-content {
+  background-image: var(--gradient);
+  width: 100%;
+  margin: 100px auto;
+  padding: 50px;
+  box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+  border-radius: 4px;
+}
+
+.card_movie {
+  background-image: var(--gradient);
+  box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+  height: 100%;
+  margin-top: 30px;
+  padding: 5px;
+  transition: transform 0.9s ease;
+  width: 100%;
+  max-width: 350px; /* Kartın maksimum genişliği */
+}
+
+.card_movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.625rem 1.875rem rgba(118, 85, 225, 0.5);
+}
+.card-title {
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+}
+.card-text {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.movies .col-lg-4 {
+  margin-bottom: 20px;
 }

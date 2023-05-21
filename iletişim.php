@@ -88,14 +88,14 @@
         <div class="container">
           <div class="row my-3 ">
             <div class="col-lg-12 my-4">
-              <h1 class="display-3" >İletisim Bilgileri</h1>
+              <h1 class="display-3" >Kullanıcı Bilgileri</h1>
             </div>
           </div>
           <div class="row my-1 ">
             <div class="col-lg-12 my-1" style="background-color:aliceblue">
-            <table   class="table" >
+            <table class="table table-borderless">
             <tr>
-                <td>e-mail</td>
+                <td>E-mail</td>
                 <td ><?php echo $_POST["email"]?></td>
             	</tr>
             <tr>
@@ -109,6 +109,10 @@
               <tr>
                 <td>Cinsiyet</td>
                 <td ><?php echo $_POST["gender"]?></td>
+              </tr>
+              <tr>
+                <td>Doğum tarihi</td>
+                <td ><?php echo $_POST["birthDate"]?></td>
               </tr>
               <tr>
                 <td>konu</td>

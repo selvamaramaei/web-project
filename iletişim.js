@@ -6,6 +6,7 @@ function validate() {
   var subject = document.getElementById("subject").value;
   var message = document.getElementById("message").value;
   var city = document.getElementById("inputState").value;
+  var birthDate = document.getElementById("birthDate").value;
 
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -34,6 +35,11 @@ function validate() {
   }
   if (city === "Seçin...") {
     alert("Şehir seçilmemiş!");
+    return false;
+  }
+
+  if (birthDate === "") {
+    alert("Doğum tarihi girilmedi!");
     return false;
   }
 

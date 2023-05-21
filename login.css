@@ -41,7 +41,8 @@
   border-radius: 4px;
 }
 
-.form-label {
+.form-label,
+.form-check-label {
   font-size: 1.25rem;
   line-height: 0.75rem;
   font-weight: 200;
